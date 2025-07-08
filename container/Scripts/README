@@ -1,0 +1,40 @@
+### RGPred ###
+
+RGPred is a SVM based high-throughput plant resistance gene prediction pipeline from plant genome, transcriptome and proteome sequences. It have been developed for the prediction of four class of resistance gene through the combination of binary classifier i.e. CNL, TNL, RLK and RLP. Sequence composition (amino-acid, dipeptide, tripeptide,multiplet,charge,hydrophobicity) propeties of resistance genes have been used for the classification of plant resistance gene from non plant resistance genes. RGPred uses Augustus for resistance gene prediction for genome sequences and Transdecoder for transcriptome sequence
+
+## Requirement
+1. Unix based opertating OS
+2. Perl version >5.0
+3. Augustus version >=3.3
+4. Transdecoder version >=5.2
+
+## Installation
+1.Augustus forgGenome sequences:
+    I. Download Augustus (http://bioinf.uni-greifswald.de/augustus/binaries/augustus-3.3.2.tar.gz) and install as per augustus installation instruction in augustus README file
+    II. Set environment variable AUGUSTUS_CONFIG_PATH: export AUGUSTUS_CONFIG_PATH=/my_path_to_AUGUSTUS/augustus/config/
+    OR
+    Run through augustus command line option:
+    --AUGUSTUS_CONFIG_PATH=/my_path_to_AUGUSTUS/augustus/config/
+    III. Run augustus --species=arabidopsis --gff3=on --uniqueGeneId=true --codingseq=on genomic_seq.fasta
+
+
+2.Transdecoder for transcriptome sequences:
+    I. Download Transdecoder (https://github.com/TransDecoder/TransDecoder/archive/TransDecoder-v5.2.0.tar.gz) and install ase per transdecoder instruction
+    II. Export Transdecoder path: export PATH=$PATH:~/path to/TransDecoder-TransDecoder-v5.2.0/
+    III. Check the Transdecoder commands from terminal: TransDecoder.LongOrfs/TransDecoder.Predict
+
+
+## Running RGPred
+For convenience, put input file in RGPred folder and run
+
+perl RGPred.pl --Infile=FVXD.fna --Seqtype=T --Score_cutof=0.1 --Tempfile=YES
+
+for more detail information of running parameters, run help
+
+perl RGPred.pl --help
+ 
+
+
+
+
+
