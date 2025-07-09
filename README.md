@@ -1,2 +1,2 @@
-![Schematic Workflow]https://github.com/bioinfokushwaha/BoviHPI-Finder/edit/main/container/schematic_workflow.png
+![Schematic Workflow](https://raw.githubusercontent.com/bioinfokushwaha/BoviHPI-Finder/main/container/schematic_workflow.png)
 
