@@ -1,4 +1,3 @@
-![image](https://raw.githubusercontent.com/bioinfokushwaha/BoviHPI-Finder/main/container/schematic%workflow.png)
-
+![Schematic Workflow](container/schematic%20workflow.png)
 
 
